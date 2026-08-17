@@ -14,15 +14,13 @@ const userSchema = new mongoose.Schema(
   { timestamps: true },
 )
 
-userSchema.pre('validate', function normalizeUserPhone(next) {
+userSchema.pre('validate', function normalizeUserPhone() {
   if (this.phone) this.phone = normalizePhone(this.phone)
-  next()
 })
 
-userSchema.pre('save', async function hashPassword(next) {
-  if (!this.isModified('password')) return next()
+userSchema.pre('save', async function hashPassword() {
+  if (!this.isModified('password')) return
   this.password = await bcrypt.hash(this.password, 12)
-  next()
 })
 
 userSchema.methods.comparePassword = function comparePassword(candidatePassword) {
