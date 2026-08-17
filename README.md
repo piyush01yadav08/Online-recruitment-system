@@ -1,7 +1,7 @@
 # Online-recruitment-system
-# Online Recruitment System
 
-Project skeleton for an online recruitment platform. Implementation files are intentionally not included yet.
+
+
 
 ## Technology
 
@@ -58,13 +58,13 @@ online-recruitment-system/
 └── package.json                    # Workspace root
 ```
 
-Copy `.env.example` to `.env` and add your MongoDB Atlas connection string when backend development begins.
+Copy `.env` and add your MongoDB Atlas connection string when backend development begins.
 
 ## Authentication setup
 
 Authentication is available for applicant accounts.
 
-1. Copy `.env.example` to `.env`, then set `MONGODB_URI` to your MongoDB Atlas connection string and `JWT_SECRET` to a long random value.
+1. Copy `.env`, then set `MONGODB_URI` to your MongoDB Atlas connection string and `JWT_SECRET` to a long random value.
 2. Install and run the API: `npm --prefix server install`, then `npm --prefix server run dev`.
 3. Install and run the frontend: `npm --prefix client install`, then `npm --prefix client run dev`.
 
