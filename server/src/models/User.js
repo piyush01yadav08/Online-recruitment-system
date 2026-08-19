@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema(
     phone: { type: String, required: true, unique: true, trim: true },
     password: { type: String, required: true, minlength: 8, select: false },
     role: { type: String, enum: ['applicant', 'admin'], default: 'applicant' },
+    isActive: { type: Boolean, default: true },
   },
   { timestamps: true },
 )
@@ -28,7 +29,7 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword)
 }
 
 userSchema.methods.toSafeObject = function toSafeObject() {
-  return { id: this._id, name: this.name, email: this.email, phone: this.phone, role: this.role }
+  return { id: this._id, name: this.name, email: this.email, phone: this.phone, role: this.role, isActive: this.isActive }
 }
 
 export { normalizePhone }
