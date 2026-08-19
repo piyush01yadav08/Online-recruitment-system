@@ -15,3 +15,7 @@ connectDatabase()
     console.error(`Unable to start API: ${error.message}`)
     process.exit(1)
   })
+
+// 1. For Administrator Access (Admin Dashboard)
+// Email/Identifier: admin@hireflow.com
+// Password: Password123!

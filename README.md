@@ -69,3 +69,5 @@ Authentication is available for applicant accounts.
 3. Install and run the frontend: `npm --prefix client install`, then `npm --prefix client run dev`.
 
 The registration endpoint is `POST /api/auth/register`; existing users can log in through `POST /api/auth/login` using their email address or phone number. A valid signed-in session is available from `GET /api/auth/me` using a Bearer token.
+
+

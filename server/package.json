@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "node --watch src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seedDemoData.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
